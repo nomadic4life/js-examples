@@ -3,8 +3,13 @@ import { Metaplex } from "@metaplex-foundation/js";
 import { clusterApiUrl, Connection, PublicKey } from "@solana/web3.js";
 import { useState } from "react";
 
+import WalletConnect from "./WalletConnect.js"
+import WalletMint from "./WalletMint.js";
+
 const connection = new Connection(clusterApiUrl("devnet"));
 const mx = Metaplex.make(connection);
+
+console.log(connection)
 
 function App() {
   const [address, setAddress] = useState(
@@ -19,28 +24,30 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="container">
-        <h1 className="title">NFT Mint Address</h1>
-        <div className="nftForm">
-          <input
-            type="text"
-            value={address}
-            onChange={(event) => setAddress(event.target.value)}
-          />
-          <button onClick={fetchNft}>Fetch</button>
-        </div>
-        {nft && (
-          <div className="nftPreview">
-            <h1>{nft.name}</h1>
-            <img
-              src={nft.json.image}
-              alt="The downloaded illustration of the provided NFT address."
-            />
-          </div>
-        )}
-      </div>
-    </div>
+    <WalletMint></WalletMint>
+    // <WalletConnect></WalletConnect>
+    // <div className="App">
+    //   <div className="container">
+    //     <h1 className="title">NFT Mint Address</h1>
+    //     <div className="nftForm">
+    //       <input
+    //         type="text"
+    //         value={address}
+    //         onChange={(event) => setAddress(event.target.value)}
+    //       />
+    //       <button onClick={fetchNft}>Fetch</button>
+    //     </div>
+    //     {nft && (
+    //       <div className="nftPreview">
+    //         <h1>{nft.name}</h1>
+    //         <img
+    //           src={nft.json.image}
+    //           alt="The downloaded illustration of the provided NFT address."
+    //         />
+    //       </div>
+    //     )}
+    //   </div>
+    // </div>
   );
 }
 

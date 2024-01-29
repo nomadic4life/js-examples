@@ -1,16 +1,36 @@
-# Metaplex JS SDK Examples
+# Candy Machine UI
 
-Examples and Starter Kits using the @metaplex-foundation/js SDK.
+This Solana program is a simple program that mints NFTs through a candy machine concept UI. There is a limited amount in stock. A base fee must be paid in a spl token to get a random selected NFT with in the candy machine. It's purpose is to get familiar with the token and NFT process with transactions.
 
-## Starter Kits
-- [Getting Started with Metaplex and Next.js](./getting-started-nextjs)
-- [Getting Started with Metaplex and CRA 4](./getting-started-react-cra4) (React and Webpack 4)
-- [Getting Started with Metaplex and CRA 5](./getting-started-react-cra5) (React and Webpack 5)
-- [Getting Started with Metaplex and Vite](./getting-started-vite) (React, Vue, Svelte, etc. and Vite/Rollup)
-- [Getting Started with Metaplex and Express.js](./getting-started-expressjs)
-- [Getting Started with Metaplex and EsBuild](./getting-started-react-esbuild/) (React and EsBuild)
+## Note
 
-## Reference Implementations
-- [Connect with wallets in the browser](./connect-wallet)
-- [Fetch and paginate NFTs in a given wallet](./paginate-nfts)
-- [Create a simple mint page fo Candy Machine v3](./mint-ui-example)
+Currently this project is a work in progress. the minting process fails through the UI. Minting can still be down through the sugar cli.
+
+##
+
+### Installing
+
+The following dependencies are required to build and run this example, depending on your OS, they may already be installed:
+
+* Install node (LTS Version Recommended)
+* Install npm
+* Install Solana v1.8.14 or later from https://docs.solana.com/cli/install-solana-cli-tools
+* Install [sugar cli](https://docs.metaplex.com/developer-tools/sugar/overview/installation)
+
+### Executing program
+
+* go to this directory [Getting Started with Metaplex and CRA 5](./getting-started-react-cra5)
+* npm install
+* npm start
+
+## Authors
+
+Contributors names and contact info
+
+Dennis Orbison
+[@Freedom_pk_live](https://twitter.com/Freedom_pk_live)
+
+
+## License
+
+This project is licensed under the [Dennis Orbison] License - see the LICENSE.md file for details

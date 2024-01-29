@@ -7,6 +7,11 @@ module.exports = function override(webpackConfig) {
     test: /\.m?js/,
     resolve: {
       fullySpecified: false,
+      fallback: {
+        "http": require.resolve("stream-http"),
+        "url": require.resolve("url/"),
+        "https": require.resolve("https-browserify")
+      }
     },
   });
 
@@ -29,6 +34,9 @@ module.exports = function override(webpackConfig) {
     process: false,
     path: false,
     zlib: false,
+    "http": require.resolve("stream-http"),
+    "url": require.resolve("url/"),
+    "https": require.resolve("https-browserify")
   };
 
   return webpackConfig;

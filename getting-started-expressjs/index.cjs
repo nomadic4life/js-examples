@@ -17,6 +17,8 @@ const keypairFile = fs.readFileSync(pathToMyKeypair);
 const secretKey = Buffer.from(JSON.parse(keypairFile.toString()));
 const keypair = Keypair.fromSecretKey(secretKey);
 
+console.log({ keypair, secretKey, keypairFile, pathToMyKeypair })
+
 const app = express();
 
 const connection = new Connection(clusterApiUrl("devnet"));
